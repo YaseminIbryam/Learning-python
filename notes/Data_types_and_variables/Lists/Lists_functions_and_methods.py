@@ -73,3 +73,9 @@ print(liste.clear())
 numbers = [1, 2, 3, 4, 2, 4, 5, 8, 3, 5, 6,]
 unique_numbers = list(set(numbers))
 print(unique_numbers)
+
+# *
+digits = [4, 7, 2, 7, 6]
+print(*digits)  # 4 7 2 7 6
+print(*digits, sep='')  # 47276
+
