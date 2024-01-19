@@ -69,7 +69,7 @@ print(harf1)
 #clear(listeyi silmeye(bosaltmaya) yarar)
 print(liste.clear())
 
-# list(set() (if are used the same values multiple times using this method will remove the copies)
+# set() (if are used the same values multiple times using this method will remove the copies)
 numbers = [1, 2, 3, 4, 2, 4, 5, 8, 3, 5, 6,]
 unique_numbers = list(set(numbers))
 print(unique_numbers)
@@ -79,3 +79,12 @@ digits = [4, 7, 2, 7, 6]
 print(*digits)  # 4 7 2 7 6
 print(*digits, sep='')  # 47276
 
+# join - Concatenate any number of strings.
+one_list = ['5', '9', '0']
+one_list = '.'.join(one_list)
+print(one_list)   # 5.9.0
+
+# split
+string = "wolf, sheep, sheep"
+now_the_string_is_a_list = string.split(', ')  # split removes the (,) and ( ) from the sting
+print(now_the_string_is_a_list)  # [wolf, sheep, sheep]
