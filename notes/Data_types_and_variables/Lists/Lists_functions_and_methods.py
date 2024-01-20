@@ -29,7 +29,7 @@ liste2 = ["lol", 29, 0]
 liste.extend(liste2)  # liste2'yi liste'yin sonuna eklemis olduk
 print(liste)
 
-# remove(listedeki elemani silmeye yariyor)
+# remove(removes an element from list) note: if we have same element multiple times the method removes only one of them
 liste.remove(9.0)
 print(liste)
 
@@ -39,11 +39,11 @@ print(liste)
 
 # sort(elemanlarin alfabeye gore dizilmesine yariyor)
 liste0 = ["hah", "ah", "mhm", "hmm"]
-liste0.sort()
+liste0.sort()  # liste0.sort(reverse=True) in this case it will reverse sorted elements
 print(liste0)
 # (sayilarda ise buyuklune gore)
 liste1 = [3, 5, 7.5, 2]
-liste1.sort()
+liste1.sort()  # liste1.sort(reverse=True) in this case it will reverse sorted numbers
 print(liste1)
 
 # reverse(sort metodunun aksine elemanlari tersine dizer)
@@ -100,5 +100,11 @@ print(nums)  # prints nums as strings in list
 # map
 nums1 = list(map(int, input().split(', ')))
 print(nums1)  # prints nums as integers in list
+
+# something more
+first, *second, third = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(first)  # 1
+print(second)  # 2, 3, 4, 5, 6, 7, 8, 9
+print(third)  # 10
 
 
