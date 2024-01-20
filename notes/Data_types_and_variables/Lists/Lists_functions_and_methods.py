@@ -13,8 +13,13 @@ print(liste[0:3])
 print(liste[1::2])
 print(liste[5:0:-2])
 
+# searching for elements
+just_list = [1, 2, 3, 4]
+if 3 in just_list:
+    print("Element 3 is in the list")
 
-# METODLAR
+
+# METHODS
 
 # append(listenin sonuna tek eleman eklememizi sagliyor)
 liste.append("ok")
@@ -54,6 +59,11 @@ print(liste1)
 
 # index(elemanlari aramamizi sagliyor)
 print(liste.index(29))
+# to not have value error when we search for element which is not in the list
+try:
+    print(just_list.index(3))
+except ValueError:
+    print("Element not found")
 
 # count(listede o elemandan kac tane oldugunu bulmamiza yariyor)
 sayi = [1, 4, 1, 6, 5, 2, 1, 3]
@@ -66,10 +76,10 @@ harf1 = harf.copy()
 
 print(harf1)
 
-#clear(listeyi silmeye(bosaltmaya) yarar)
+# clear(listeyi silmeye(bosaltmaya) yarar)
 print(liste.clear())
 
-# set() (if are used the same values multiple times using this method will remove the copies)
+# set() set is another data type (if are used the same values multiple times using this will remove the copies)
 numbers = [1, 2, 3, 4, 2, 4, 5, 8, 3, 5, 6,]
 unique_numbers = list(set(numbers))
 print(unique_numbers)
@@ -106,5 +116,7 @@ first, *second, third = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(first)  # 1
 print(second)  # 2, 3, 4, 5, 6, 7, 8, 9
 print(third)  # 10
+
+
 
 
