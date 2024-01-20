@@ -5,10 +5,10 @@ print(len(liste))
 # listenin 1.elemaninin kac karakterden olustugnu gosteriyor
 # print(len(liste[1]))  # int'te kullanilamaz
 
-# elemanlara ulasma
+# accessing elements
 print(liste[0])
 print(liste[4])
-print(liste[4][1])  # listedeki tuple'in elemanina ulasma
+print(liste[4][1])  # accessing elements in tuple in the list
 print(liste[0:3])
 print(liste[1::2])
 print(liste[5:0:-2])
@@ -81,10 +81,24 @@ print(*digits, sep='')  # 47276
 
 # join - Concatenate any number of strings.
 one_list = ['5', '9', '0']
-one_list = '.'.join(one_list)
-print(one_list)   # 5.9.0
+one_string = '.'.join(one_list)
+print(one_string)   # 5.9.0
 
 # split
 string = "wolf, sheep, sheep"
-now_the_string_is_a_list = string.split(', ')  # split removes the (,) and ( ) from the sting
-print(now_the_string_is_a_list)  # [wolf, sheep, sheep]
+now_the_string_is_a_list = string.split(', ')  # split removes the (,) and ( ) from the sting in this case
+print(now_the_string_is_a_list)  # ["wolf", "sheep", "sheep"]
+
+some_text = "a b c d"
+list_text = some_text.split(' ')
+print(list_text)  # ['a', 'b', 'c', 'd']
+
+# make list from input
+nums = input().split(', ')
+print(nums)  # prints nums as strings in list
+
+# map
+nums1 = list(map(int, input().split(', ')))
+print(nums1)  # prints nums as integers in list
+
+
