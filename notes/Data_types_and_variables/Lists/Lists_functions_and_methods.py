@@ -1,3 +1,5 @@
+from typing import List, Any
+
 liste = ["Python", 3, 9.0, "java", ("Hello", 30, "swo")]
 # len fonksyonu (listenin kac elemandan olustugnu gosteriyor)
 print(len(liste))
@@ -17,7 +19,6 @@ print(liste[5:0:-2])
 just_list = [1, 2, 3, 4]
 if 3 in just_list:
     print("Element 3 is in the list")
-
 
 # METHODS
 
@@ -51,11 +52,12 @@ liste1 = [3, 5, 7.5, 2]
 liste1.sort()  # liste1.sort(reverse=True) in this case it will reverse sorted numbers
 print(liste1)
 
-# reverse(sort metodunun aksine elemanlari tersine dizer)
+# reverse(elemanlari tersine dizer)
 liste0.reverse()
 print(liste0)
 liste1.reverse()
 print(liste1)
+# reversed (doesn't change the original version of the list, but you can use it as it is reversed)
 
 # index(elemanlari aramamizi sagliyor)
 print(liste.index(29))
@@ -71,7 +73,6 @@ print(sayi.count(1))
 
 # copy(bi listeden kopyalamaya yariyor)
 harf = ["d", "g", "u", "w"]
-harf1 = []
 harf1 = harf.copy()
 
 print(harf1)
@@ -80,7 +81,7 @@ print(harf1)
 print(liste.clear())
 
 # set() set is another data type (if are used the same values multiple times using this will remove the copies)
-numbers = [1, 2, 3, 4, 2, 4, 5, 8, 3, 5, 6,]
+numbers = [1, 2, 3, 4, 2, 4, 5, 8, 3, 5, 6, ]
 unique_numbers = list(set(numbers))
 print(unique_numbers)
 
@@ -92,7 +93,7 @@ print(*digits, sep='')  # 47276
 # join - Concatenate any number of strings.
 one_list = ['5', '9', '0']
 one_string = '.'.join(one_list)
-print(one_string)   # 5.9.0
+print(one_string)  # 5.9.0
 
 # split
 string = "wolf, sheep, sheep"
@@ -116,7 +117,3 @@ first, *second, third = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(first)  # 1
 print(second)  # 2, 3, 4, 5, 6, 7, 8, 9
 print(third)  # 10
-
-
-
-
