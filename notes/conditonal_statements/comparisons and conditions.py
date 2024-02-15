@@ -1,10 +1,10 @@
 a = 4
 b = 4.1
-print(a == b)  # a b'ye eşitmiridir
-# == eşitmidir
-print(a != b)  # a b'ye eşit değilmidir
-# != eşit değilmidir
-print(a > b)  # a b'den büyükmüdür
+print(a == b)  # Is a equal to b?
+# == means equal to
+print(a != b)  # Is a not equal to b?
+# != means not equal to
+print(a > b)  # Is a greater than b?
 
 # in
 is_in = "a" in "abc"  # True
@@ -18,9 +18,11 @@ else:
     print("Not found!")
 
 """
-> büyükmüdür
-< küçükmüdür
->= büyük veya eşitmidir
-<= küçük veya eşitmidir """
+> means greater than
+< means less than
+>= means greater than or equal to
+<= means less than or equal to
+"""
+
 
 

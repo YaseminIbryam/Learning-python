@@ -1,37 +1,32 @@
-kisi = {"isim": "ali", "yas": 20, "cinsiyet": "m", "hobiler": ["sinema", "konser", "yazilim"]}
-# keys(ilk kisim) ve value(ikinci kisim) kisimlarindan olusur
-# value butun veri turunu icerebilir
-# keys kismi sadece string ve int tipinde olabilir
-print(kisi)
-print(kisi["isim"])  # sozlukteki isim(key)'in degerini(value) yazdiriyor
-kisi["isim"] = "ahmet"  # keyin degerini degistiriyor
-print(kisi)
-kisi.update({"yas": 30, "isim": "mehmet"})  # birkac keyin degerini degistiriyor
-print(kisi)
-kisi["id"] = 6878686  # yeni key ve degerini eklemek
-print(kisi)
-del kisi["id"]  # bir keyi siliyor
-print(kisi)
+person = {"name": "Ali", "age": 20, "gender": "m", "hobbies": ["cinema", "concert", "software"]}
+# A dictionary consists of keys (first part) and values (second part).
+# Values can contain any data type.
+# Keys can only be of type string and integer.
+print(person)
+print(person["name"])  # Printing the value of the key "name" in the dictionary.
+person["name"] = "Ahmet"  # Changing the value of the key.
+print(person)
+person.update({"age": 30, "name": "Mehmet"})  # Changing the values of several keys.
+print(person)
+person["id"] = 6878686  # Adding a new key and value.
+print(person)
+del person["id"]  # Deleting a key.
+print(person)
 
-for i in kisi:
-    print(i)  # sadece keyleri yazdiriyor
+for key in person:
+    print(key)  # Printing only the keys.
 
-for i in kisi:
-    print(kisi[i])  # sadece valueleri yazdiriyor
+for key in person:
+    print(person[key])  # Printing only the values.
 
-print(kisi.keys())  # keys yazdiriyor
-print(kisi.values())  # values yazdiriyor
-print(kisi.items())  # keys ve values eslestirip yazdiriyor
+print(person.keys())  # Printing the keys.
+print(person.values())  # Printing the values.
+print(person.items())  # Printing the keys and values together.
 
-for i in kisi.items():  # keys ve values eslestirip yazdiriyor(for dongusu ile)
-    print(i)
-
-for i, k in kisi.items():  # keys ve values eslestirip yazdiriyor(for dongusu ile) daha iyi bir sekilde
-    print(i, k)
-
-for key, value in kisi.items():
+for key, value in person.items():  # Printing the keys and values together (with a for loop).
     print(key, value)
 
-# hata almadan sozlukte olmayan key cagirma
-print(kisi.get("id", "yok"))  # sozlukte olan key de cagrilabilir
-# eger olmayan key cagrildiysa virgul ile ayirdiktan sonra yazilan yazdirilir
+# Accessing a key not in the dictionary without getting an error.
+print(person.get("id", "not found"))  # You can also access keys that are in the dictionary.
+# If a non-existent key is accessed, the text after the comma is printed.
+

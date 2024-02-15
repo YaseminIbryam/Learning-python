@@ -1,119 +1,114 @@
 from typing import List, Any
 
-liste = ["Python", 3, 9.0, "java", ("Hello", 30, "swo")]
-# len fonksyonu (listenin kac elemandan olustugnu gosteriyor)
-print(len(liste))
+# Creating a list with different data types.
+my_list = ["Python", 3, 9.0, "Java", ("Hello", 30, "world")]
 
-# listenin 1.elemaninin kac karakterden olustugnu gosteriyor
-# print(len(liste[1]))  # int'te kullanilamaz
+# len() function (shows the number of elements in the list).
+print(len(my_list))
 
-# accessing elements
-print(liste[0])
-print(liste[4])
-print(liste[4][1])  # accessing elements in tuple in the list
-print(liste[0:3])
-print(liste[1::2])
-print(liste[5:0:-2])
+# Accessing elements.
+print(my_list[0])  # Accessing the first element.
+print(my_list[4])  # Accessing the fifth element.
+print(my_list[4][1])  # Accessing elements in a tuple within the list.
+print(my_list[0:3])  # Slicing the list.
+print(my_list[1::2])  # Slicing the list with step 2.
+print(my_list[5:0:-2])  # Slicing the list in reverse with step 2.
 
-# searching for elements
+# Searching for elements.
 just_list = [1, 2, 3, 4]
 if 3 in just_list:
     print("Element 3 is in the list")
 
 # METHODS
 
-# append(listenin sonuna tek eleman eklememizi sagliyor)
-liste.append("ok")
-print(liste)
+# append() (adds a single element to the end of the list).
+my_list.append("ok")
+print(my_list)
 
-# insert(listenin istedigimiz indexine eleman eklememizi sagliyor)
-liste.insert(2, "wow")  # listenin 2.nci indexine eleman eklemis olduk
-print(liste)
+# insert() (inserts an element at the specified index).
+my_list.insert(2, "wow")  # Inserting an element at index 2.
+print(my_list)
 
-# extend(listeyi baska bir liste ile ganisletmeye yariyor)
-liste2 = ["lol", 29, 0]
-liste.extend(liste2)  # liste2'yi liste'yin sonuna eklemis olduk
-print(liste)
+# extend() (extends the list by appending elements from another list).
+another_list = ["lol", 29, 0]
+my_list.extend(another_list)  # Appending another_list to my_list.
+print(my_list)
 
-# remove(removes an element from list) note: if we have same element multiple times the method removes only one of them
-liste.remove(9.0)
-print(liste)
+# remove() (removes an element from the list, only the first occurrence if there are duplicates).
+my_list.remove(9.0)
+print(my_list)
 
-# pop(listedeki elemani indexi ile silmeye yariyor ve default olarak son elemani siliyor)
-liste.pop(8)
-print(liste)
+# pop() (removes the element at the specified index, or the last element by default).
+my_list.pop(8)
+print(my_list)
 
-# sort(elemanlarin alfabeye gore dizilmesine yariyor)
-liste0 = ["hah", "ah", "mhm", "hmm"]
-liste0.sort()  # liste0.sort(reverse=True) in this case it will reverse sorted elements
-print(liste0)
-# (sayilarda ise buyuklune gore)
-liste1 = [3, 5, 7.5, 2]
-liste1.sort()  # liste1.sort(reverse=True) in this case it will reverse sorted numbers
-print(liste1)
+# sort() (sorts the elements alphabetically or numerically).
+alpha_list = ["hah", "ah", "mhm", "hmm"]
+alpha_list.sort()  # Sorting alphabetically.
+print(alpha_list)
+numeric_list = [3, 5, 7.5, 2]
+numeric_list.sort()  # Sorting numerically.
+print(numeric_list)
 
-# reverse(elemanlari tersine dizer)
-liste0.reverse()
-print(liste0)
-liste1.reverse()
-print(liste1)
-# reversed (doesn't change the original version of the list, but you can use it as it is reversed)
+# reverse() (reverses the order of the elements).
+alpha_list.reverse()
+print(alpha_list)
+numeric_list.reverse()
+print(numeric_list)
 
-# index(elemanlari aramamizi sagliyor)
-print(liste.index(29))
-# to not have value error when we search for element which is not in the list
+# index() (returns the index of the specified element).
+print(my_list.index(29))
 try:
     print(just_list.index(3))
 except ValueError:
     print("Element not found")
 
-# count(listede o elemandan kac tane oldugunu bulmamiza yariyor)
-sayi = [1, 4, 1, 6, 5, 2, 1, 3]
-print(sayi.count(1))
+# count() (returns the number of occurrences of the specified element).
+numbers = [1, 4, 1, 6, 5, 2, 1, 3]
+print(numbers.count(1))
 
-# copy(bi listeden kopyalamaya yariyor)
-harf = ["d", "g", "u", "w"]
-harf1 = harf.copy()
+# copy() (returns a shallow copy of the list).
+letters = ["d", "g", "u", "w"]
+letters_copy = letters.copy()
+print(letters_copy)
 
-print(harf1)
+# clear() (removes all elements from the list).
+print(my_list.clear())
 
-# clear(listeyi silmeye(bosaltmaya) yarar)
-print(liste.clear())
-
-# set() set is another data type (if are used the same values multiple times using this will remove the copies)
-numbers = [1, 2, 3, 4, 2, 4, 5, 8, 3, 5, 6, ]
+# set() (returns a set, which is a collection with no duplicate elements).
+numbers = [1, 2, 3, 4, 2, 4, 5, 8, 3, 5, 6]
 unique_numbers = list(set(numbers))
 print(unique_numbers)
 
-# *
+# * (unpacking operator, used to unpack the elements of a list).
 digits = [4, 7, 2, 7, 6]
-print(*digits)  # 4 7 2 7 6
-print(*digits, sep='')  # 47276
+print(*digits)  # Prints the elements separated by a space.
+print(*digits, sep='')  # Prints the elements without any separation.
 
-# join - Concatenate any number of strings.
+# join() (joins the elements of a list into a single string using a specified separator).
 one_list = ['5', '9', '0']
 one_string = '.'.join(one_list)
-print(one_string)  # 5.9.0
+print(one_string)  # "5.9.0"
 
-# split
+# split() (splits a string into a list).
 string = "wolf, sheep, sheep"
-now_the_string_is_a_list = string.split(', ')  # split removes the (,) and ( ) from the sting in this case
+now_the_string_is_a_list = string.split(', ')  # Splits the string at ', '
 print(now_the_string_is_a_list)  # ["wolf", "sheep", "sheep"]
 
 some_text = "a b c d"
 list_text = some_text.split(' ')
 print(list_text)  # ['a', 'b', 'c', 'd']
 
-# make list from input
+# make a list from input.
 nums = input().split(', ')
-print(nums)  # prints nums as strings in list
+print(nums)  # Prints input as strings in a list.
 
-# map
+# map() (applies a function to all the items in an input list).
 nums1 = list(map(int, input().split(', ')))
-print(nums1)  # prints nums as integers in list
+print(nums1)  # Prints input as integers in a list.
 
-# something more
+# Unpacking operator with more elements.
 first, *second, third = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(first)  # 1
-print(second)  # 2, 3, 4, 5, 6, 7, 8, 9
+print(second)  # [2, 3, 4, 5, 6, 7, 8, 9]
 print(third)  # 10
