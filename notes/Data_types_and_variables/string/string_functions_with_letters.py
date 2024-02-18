@@ -1,4 +1,4 @@
-text = "  My name is Yasemin Ibryam. I live in Krumovgrad.  "
+text = "  My name is Yasemin. I live in Bulgaria.  "
 result = text.upper()  # Makes all letters uppercase
 print(result)
 result1 = text.lower()  # Makes all letters lowercase

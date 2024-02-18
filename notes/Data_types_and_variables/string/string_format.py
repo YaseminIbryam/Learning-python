@@ -21,4 +21,4 @@ number = 5/3
 print("the result it is {n:1.6}".format(n=number))  # Formats the number with 6 decimal places
 
 # Using f-strings (formatted string literals) for string formatting (available in newer Python versions)
-# print(f"My name is {name} {surname) and I am {age} years old.")  # Uncomment this line in newer Python versions
+# print(f"My name is {name} {surname} and I am {age} years old.")  # Uncomment this line in newer Python versions
