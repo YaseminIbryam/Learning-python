@@ -24,9 +24,6 @@ print(person.items())  # Printing the keys and values together.
 for key, value in person.items():  # Printing the keys and values together (with a for loop).
     print(key, value)
 
-# Accessing a value of key not in the dictionary without getting an error.
-print(person.get("id", "not found"))  # You can also access keys that are in the dictionary.
-# If a non-existent key is accessed, the text after the comma is printed.
 
 # Dictionary comprehensions
 data = [("Peter", 22), ("Amy", 18), ("George", 35)]
@@ -57,3 +54,14 @@ print(my_dict)  # {"fruit": "apple"}
 del person["id"]  # Deleting a key.
 print(person)
 # del keyword can also delete the dictionary completely (del dict)
+
+# get; Accessing a value of key not in the dictionary without getting an error.
+print(person.get("id", "not found"))  # You can also access keys that are in the dictionary.
+# If a non-existent key is accessed, the data after the comma is returned.
+# get can be used for adding not existing keys and extending them at the same time
+netflix = {"series": ["Descendant of the sun", "Alice in Borderland"],
+           "movies": ["Harry Potter", "The maze runner"]}
+variable_we_are_searching_for = "series"
+what_it_will_return_if_variable_is_missing = []
+what_we_want_to_add_or_extend_with = "like extend for lists"
+netflix[variable_we_are_searching_for] = netflix.get(variable_we_are_searching_for, what_we_want_to_add_or_extend_with) + [what_we_want_to_add_or_extend_with]
