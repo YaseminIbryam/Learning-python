@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+section {
+  padding: 40px;
+}
+
+footer {
+  .envelope-icon {
+  color: black; /* Change the color as needed */
+  font-size: 15px; /* Adjust the size as needed */
+  cursor: pointer; /* Make the icon clickable */
+    margin-right: 8px;
+  }
+  .github-icon {
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  background-color: #f0f0f0;
+  font-size: 10px;
+  padding: 20px;
+  text-align: left;
+
+}
